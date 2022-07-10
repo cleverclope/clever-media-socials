@@ -1,0 +1,33 @@
+
+<div class="socials">
+  <div>
+    <img  src="../assets/me.jpeg"
+          style=" padding: 20px; margin-left: auto; margin-right: auto; width: 20%; display: block;" />
+  </div>
+
+  <div class="social-links">
+    <mat-card> <p> ARINDA CLEVER </p>  <h2>Software Engineer</h2> </mat-card>
+  </div>
+
+  <div fxLayout>
+    <div fxFlex="90" fxFlexOffset="5">
+      <p style="text-align:center; color: aliceblue;">Follow Me Guys !</p>
+      <div fxLayout.xs="column" fxLayoutGap="50px"
+           fxLayout.sm="column" fxLayoutGap.sm="20px" fxLayout fxLayoutAlign="center">
+
+           <div fxFlex="80" fxFlexAlign="center">
+            <div fxLayout fxLayoutAlign="center" fxLayoutGap="20px">
+                  <a *ngFor="let mySocialPlatform of mySocialPlatforms"
+                      [href]="mySocialPlatform.platformLink"
+                      target="_blank"
+                      [matTooltip]="mySocialPlatform.platformTip">
+                      <i [class]="mySocialPlatform.platformIcon" style="margin: 0 auto; color: azure; font-size: 50px;"></i>
+                  </a>
+            </div>
+           </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
